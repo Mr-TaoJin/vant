@@ -19,5 +19,25 @@ module.exports = {
         ]
       }
     }
-  }
+  },
+  //生产环境取消 console.log
+  configureWebpack: config => {
+    if (process.env.NODE_ENV === 'production') {
+      config.optimization.minimizer[0].options.terserOptions.compress.drop_console = true
+    }
+  },
+  devServer: {
+    port: 8008,
+    host: 'localhost',
+    proxy: {
+      '/proxyApi': {
+        target: 'http://wxt1.leye.ccb.com/phjr', //源地址 
+        ws: false,
+        changeOrigin: true,//改变源
+        pathRewrite: {
+          '^/proxyApi': ''//路径重写 
+        }
+      }
+    }
+  },
 };
