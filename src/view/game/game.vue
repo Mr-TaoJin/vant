@@ -2,7 +2,7 @@
   <div>
     <Header></Header>
     <div class="main_box">
-      <div>1111</div>
+      <div>222222</div>
     </div>
     <Footer></Footer>
   </div>
@@ -10,6 +10,7 @@
 
 <script>
 export default {
+  name:"game",
   components: {},
 
   data() {
