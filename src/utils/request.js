@@ -4,10 +4,10 @@ import store from '@/store'
 
 import { Modal, notification } from 'ant-design-vue'
 import { ACCESS_TOKEN } from "@/store/mutation-types"
-import baseConfig from "@/baseConfig";
+import httpConfig from "@/httpConfig";
 // 创建 axios 实例
-// let baseURL = process.env.NODE_ENV == 'development' ? '/proxyApi' : (process.env.NODE_ENV == 'production'?baseConfig.api_url:'');
-let baseURL = process.env.NODE_ENV == 'development' ? baseConfig.api_url : (process.env.NODE_ENV == 'production' ? baseConfig.api_url : '');
+// let baseURL = process.env.NODE_ENV == 'development' ? '/proxyApi' : (process.env.NODE_ENV == 'production'?httpConfig.api_url:'');
+let baseURL = process.env.NODE_ENV == 'development' ? httpConfig.api_url : (process.env.NODE_ENV == 'production' ? httpConfig.api_url : '');
 const service = axios.create({
   baseURL: baseURL,
   timeout: 6000 // 请求超时时间

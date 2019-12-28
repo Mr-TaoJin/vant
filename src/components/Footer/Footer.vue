@@ -1,6 +1,6 @@
 <template>
   <van-tabbar route
-              active-color="#07c160"
+              active-color="#FF9900"
               inactive-color="#000">
     <van-tabbar-item replace
                      to="/home"
@@ -9,7 +9,7 @@
                      to="/game"
                      icon="search">赛事</van-tabbar-item>
     <van-tabbar-item replace
-                     to="/center"
+                     to="/user"
                      icon="friends-o">我的</van-tabbar-item>
   </van-tabbar>
 </template>
@@ -22,9 +22,7 @@ export default {
     return {};
   },
 
-  methods: {
-
-  }
+  methods: {}
 };
 </script>
 

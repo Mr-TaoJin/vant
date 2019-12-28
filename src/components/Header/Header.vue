@@ -24,10 +24,18 @@ export default {
 
   methods: {
     onClickLeft() {
-      this.$toast("返回");
+      if (
+        this.$route.path == "/bind_mobile" &&
+        this.$store.state.user.user_auth.is_login == 1 &&
+        this.type
+      ) {
+        this.$router.replace({ path: "/home" });
+        return;
+      }
+      this.$router.back();
     },
     onClickRight() {
-      this.$toast("首页");
+      this.$router.push({ path: "/home", query: {} });
     }
   },
   mounted() {

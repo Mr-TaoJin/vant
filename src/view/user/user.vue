@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name:"center",
+  name:"user",
   components: {},
 
   data() {

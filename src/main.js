@@ -5,12 +5,20 @@ import App from './App';
 import { router } from './router';
 import store from './store'
 import Storage from 'vue-ls'
-
-import { NavBar, Tabbar, TabbarItem, Toast } from 'vant';
+import { NavBar, Tabbar, TabbarItem, Toast, Row, Col, Swipe, SwipeItem, Icon, List, Cell, Tab, Tabs } from 'vant';
 Vue.use(NavBar)
   .use(Tabbar)
   .use(TabbarItem)
-  .use(Toast);
+  .use(Toast)
+  .use(Row)
+  .use(Col)
+  .use(Swipe)
+  .use(SwipeItem)
+  .use(Icon)
+  .use(List)
+  .use(Cell)
+  .use(Tab)
+  .use(Tabs)
 
 
 //公共组件
