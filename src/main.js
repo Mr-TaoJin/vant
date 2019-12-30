@@ -5,7 +5,22 @@ import App from './App';
 import { router } from './router';
 import store from './store'
 import Storage from 'vue-ls'
-import { NavBar, Tabbar, TabbarItem, Toast, Row, Col, Swipe, SwipeItem, Icon, List, Cell, Tab, Tabs } from 'vant';
+import {
+  NavBar,
+  Tabbar,
+  TabbarItem,
+  Toast,
+  Row,
+  Col,
+  Swipe,
+  SwipeItem,
+  Icon,
+  List,
+  Cell,
+  Tab,
+  Tabs,
+  Search
+} from 'vant';
 Vue.use(NavBar)
   .use(Tabbar)
   .use(TabbarItem)
@@ -19,6 +34,7 @@ Vue.use(NavBar)
   .use(Cell)
   .use(Tab)
   .use(Tabs)
+  .use(Search)
 
 
 //公共组件

@@ -32,4 +32,12 @@ body {
 .translate { transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); top: 50%; left: 50%;}
 .translateX { transform: translateX(-50%); -webkit-transform: translateX(-50%); left: 50%;}
 .translateY { transform: translateY(-50%); -webkit-transform: translateY(-50%); top: 50%;}
+/*包含以下四种的链接*/
+a {
+  text-decoration: none;
+  color:#000;
+}
+.router-link-active {
+    text-decoration: none;
+}
 </style>

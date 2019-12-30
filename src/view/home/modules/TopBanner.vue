@@ -20,7 +20,9 @@
       </van-col>
       <van-col span="11"
                class="tr btn">
-        <span>输入名称搜索</span>
+        <router-link :to="{path:'/search',query:{}}">
+          <span>输入名称搜索</span>
+        </router-link>
       </van-col>
     </van-row>
     <van-swipe class="handle_banner"

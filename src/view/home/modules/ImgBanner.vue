@@ -1,15 +1,16 @@
 <template>
   <!-- 图片轮播 -->
   <div class="img_box">
-    <van-swipe :autoplay='3000'
-               @change="onChange"
-               :initial-swipe="initialSwipe">
-      <van-swipe-item class="b_item"
-                      :key="item.key"
-                      :index="index"
-                      v-for="(item,index) in banner_list">
-        <img src="@/assets/home/banner.png"
-             alt="">
+    <van-swipe :autoplay="3000" @change="onChange" :initial-swipe="initialSwipe">
+      <van-swipe-item
+        class="b_item"
+        :key="item.key"
+        :index="index"
+        v-for="(item,index) in banner_list"
+      >
+        <router-link :to="{path: '/share', query:{}}">
+          <img src="@/assets/home/banner.png" alt />
+        </router-link>
       </van-swipe-item>
     </van-swipe>
   </div>

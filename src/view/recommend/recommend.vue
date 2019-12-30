@@ -3,98 +3,88 @@
     <Header></Header>
     <div class="main_box">
       <div class="tab_box">
-        <van-tabs v-model="active"
-                  swipeable
-                  @change="onTabChange">
-          <van-tab v-for="(item,index) in tabList"
-                   :key="index"
-                   :index="index">
+        <van-tabs v-model="active" swipeable @change="onTabChange">
+          <van-tab v-for="(item,index) in tabList" :key="index" :index="index">
             <div slot="title">
               <span :class="{'tab_cl':active==index}">{{item}}</span>
             </div>
             <!-- 列表 -->
-            <van-list v-model="loading"
-                      :offset="0"
-                      :finished="finished"
-                      finished-text="没有更多了"
-                      @load="onLoad">
+            <van-list
+              v-model="loading"
+              :offset="0"
+              :finished="finished"
+              finished-text="没有更多了"
+              @load="onLoad"
+            >
               <div class="list_game_box">
-                <van-cell>
-                  <van-row class="top"
-                           type="flex"
-                           align="center">
-                    <van-col span="20">
-                      <img src="@/assets/home/game.png"
-                           alt="">
-                      <span class="tit_one">超级大神</span>
-                      <span class="tit_two">近10中8</span>
-                    </van-col>
-                    <van-col span="4"
-                             class="tr">
-                      <div class="tit_three">100%</div>
-                      <div class="tit_four">命中率</div>
-                    </van-col>
-                  </van-row>
-                  <van-row class="mid"
-                           type="flex"
-                           align="center">
-                    <van-col span="24">
-                      <span class="tit_one">西甲</span>
-                      <span class="tit_two">武汉高衙内今日澳超法乙2X1推荐推荐</span>
-                    </van-col>
-                  </van-row>
-                  <van-row class="fot"
-                           type="flex"
-                           align="center">
-                    <van-col span="20">
-                      <span class="tit_one">
-                        <van-icon name="eye-o" /><span>12</span></span>
-                      <span class="tit_two">
-                        <van-icon name="underway-o" /><span>16:02</span></span>
-                    </van-col>
-                    <van-col span="4"
-                             class="tr">
-                      <span class="tit_three">38.00豆</span>
-                    </van-col>
-                  </van-row>
-                </van-cell>
+                <router-link :to="{path:'/recommend_detail',query:{}}">
+                  <van-cell>
+                    <van-row class="top" type="flex" align="center">
+                      <van-col span="20">
+                        <img src="@/assets/home/game.png" alt />
+                        <span class="tit_one">超级大神</span>
+                        <span class="tit_two">近10中8</span>
+                      </van-col>
+                      <van-col span="4" class="tr">
+                        <div class="tit_three">100%</div>
+                        <div class="tit_four">命中率</div>
+                      </van-col>
+                    </van-row>
+                    <van-row class="mid" type="flex" align="center">
+                      <van-col span="24">
+                        <span class="tit_one">西甲</span>
+                        <span class="tit_two">武汉高衙内今日澳超法乙2X1推荐推荐</span>
+                      </van-col>
+                    </van-row>
+                    <van-row class="fot" type="flex" align="center">
+                      <van-col span="20">
+                        <span class="tit_one">
+                          <van-icon name="eye-o" />
+                          <span>12</span>
+                        </span>
+                        <span class="tit_two">
+                          <van-icon name="underway-o" />
+                          <span>16:02</span>
+                        </span>
+                      </van-col>
+                      <van-col span="4" class="tr">
+                        <span class="tit_three">38.00豆</span>
+                      </van-col>
+                    </van-row>
+                  </van-cell>
+                </router-link>
               </div>
               <div class="list_game_box">
                 <van-cell>
-                  <van-row class="top"
-                           type="flex"
-                           align="center">
+                  <van-row class="top" type="flex" align="center">
                     <van-col span="20">
-                      <img src="@/assets/home/game.png"
-                           alt="">
+                      <img src="@/assets/home/game.png" alt />
                       <span class="tit_one">超级大神</span>
                       <span class="tit_two">近10中8</span>
                     </van-col>
-                    <van-col span="4"
-                             class="tr">
+                    <van-col span="4" class="tr">
                       <div class="tit_three">100%</div>
                       <div class="tit_four">命中率</div>
                     </van-col>
                   </van-row>
-                  <van-row class="mid"
-                           type="flex"
-                           align="center">
+                  <van-row class="mid" type="flex" align="center">
                     <van-col span="24">
                       <span class="tit_one">西甲</span>
                       <span class="tit_two">武汉高衙内今日澳超法乙2X1推荐推荐</span>
                     </van-col>
                   </van-row>
-                  <van-row class="fot"
-                           type="flex"
-                           align="center">
+                  <van-row class="fot" type="flex" align="center">
                     <van-col span="20">
                       <span class="tit_one">
-                        <van-icon name="eye-o" /><span>12</span></span>
+                        <van-icon name="eye-o" />
+                        <span>12</span>
+                      </span>
                       <span class="tit_two">
-                        <van-icon name="underway-o" /><span>16:02</span></span>
+                        <van-icon name="underway-o" />
+                        <span>16:02</span>
+                      </span>
                     </van-col>
-                    <van-col span="4"
-                             class="tr">
+                    <van-col span="4" class="tr">
                       <span class="tit_three">38.00豆</span>
                     </van-col>
                   </van-row>
