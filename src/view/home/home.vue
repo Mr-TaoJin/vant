@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header></Header>
+    <!-- <Header></Header> -->
     <div class="main_box">
       <!-- 顶部滑动轮播 -->
       <top-banner></top-banner>

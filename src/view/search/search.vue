@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header></Header>
+    <!-- <Header></Header> -->
     <div class="main_box">
       <div class="serach_box">
         <van-search placeholder="请输入搜索关键词" v-model="value" />

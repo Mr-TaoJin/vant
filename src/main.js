@@ -19,7 +19,10 @@ import {
   Cell,
   Tab,
   Tabs,
-  Search
+  Search,
+  Popup,
+  Stepper,
+  Dialog,
 } from 'vant';
 Vue.use(NavBar)
   .use(Tabbar)
@@ -35,6 +38,9 @@ Vue.use(NavBar)
   .use(Tab)
   .use(Tabs)
   .use(Search)
+  .use(Popup)
+  .use(Stepper)
+  .use(Dialog)
 
 
 //公共组件

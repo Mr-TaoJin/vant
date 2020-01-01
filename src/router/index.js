@@ -9,6 +9,9 @@ const recommend = () => import(/* webpackChunkName: "recommend" */'@/view/recomm
 const share = () => import(/* webpackChunkName: "share" */'@/view/share/share')//分享
 const search = () => import(/* webpackChunkName: "search" */'@/view/search/search')//搜素
 const recommend_detail = () => import(/* webpackChunkName: "recommend_detail" */'@/view/recommendDetails/recommend_detail')//推荐详情
+const recommend_detail_small = () => import(/* webpackChunkName: "recommend_detail_small" */'@/view/recommendDetails/recommend_detail_small')//小站店主推荐详情
+const recommend_detail_common = () => import(/* webpackChunkName: "recommend_detail_common" */'@/view/recommendDetails/recommend_detail_common')//普通店主推荐详情
+const recommend_detail_expert = () => import(/* webpackChunkName: "recommend_detail_expert" */'@/view/recommendDetails/recommend_detail_expert')//专家推荐详情
 const routes = [
   {
     path: '*',
@@ -77,20 +80,33 @@ const routes = [
       isrightarrow: true
     }
   },
-  // {
-  //   name: 'cart',
-  //   component: () => import('@/view/cart'),
-  //   meta: {
-  //     title: '购物车'
-  //   }
-  // },
-  // {
-  //   name: 'goods',
-  //   component: () => import('@/view/goods'),
-  //   meta: {
-  //     title: '商品详情'
-  //   }
-  // }
+  {
+    name: 'recommend_detail_small',
+    component: recommend_detail_small,
+    meta: {
+      title: '推荐详情',
+      isleftarrow: true,
+      isrightarrow: true
+    }
+  },
+  {
+    name: 'recommend_detail_common',
+    component: recommend_detail_common,
+    meta: {
+      title: '推荐详情',
+      isleftarrow: true,
+      isrightarrow: true
+    }
+  },
+  {
+    name: 'recommend_detail_expert',
+    component: recommend_detail_expert,
+    meta: {
+      title: '推荐详情',
+      isleftarrow: true,
+      isrightarrow: true
+    }
+  },
 ];
 
 // add route path

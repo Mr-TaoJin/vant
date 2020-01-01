@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header></Header>
+    <!-- <Header></Header> -->
     <div class="main_box">
       <div>222222</div>
     </div>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header></Header>
+    <!-- <Header></Header> -->
     <div class="main_box">
       <div class="tab_box">
         <van-tabs v-model="active" swipeable @change="onTabChange">

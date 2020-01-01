@@ -9,12 +9,14 @@
 <style>
 body {
   font-size: 14px;
+  /* background-color: #999; */
   background-color: #f5f5f5;
   -webkit-font-smoothing: antialiased;
 }
 .main_box {
   box-sizing: border-box;
-  padding: 1.22667rem 0 1.33333rem 0;
+  /* padding: 1.22667rem 0 1.33333rem 0; */
+  padding: 0 0 1.33333rem 0;
 }
 .fl { float: left; }
 .fr { float: right; }

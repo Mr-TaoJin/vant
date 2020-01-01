@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header></Header>
+    <!-- <Header></Header> -->
     <div class="main_box">
       <div class="share_box">
         <img src="@/assets/home/logo.png" alt />
