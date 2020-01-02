@@ -36,7 +36,7 @@
                       :index="index"
                       v-for="(item,index) in top_banner_list">
         <div class="item">
-          <van-row>
+          <van-row type="flex" align="center">
             <van-col span="4">
               <div class="t_txt tc">最高命中榜</div>
             </van-col>
@@ -167,18 +167,17 @@ export default {
       padding: 0;
       .item {
         width: 262px;
-        background: #ffffff;
+        background: #ff0000;
         border-radius: 6px;
         .t_txt {
           box-sizing: border-box;
           padding: 34px 8px;
-          height: 172px;
           font-size: 14px;
-          background: #ff0000;
           border-top-left-radius: 6px;
           border-bottom-left-radius: 6px;
         }
         .re_box {
+          background: #ffffff;
           padding: 6px;
           .re_item {
             padding: 3px 0;
