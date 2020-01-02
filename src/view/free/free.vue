@@ -49,7 +49,6 @@
                         </span>
                       </van-col>
                       <van-col span="12" class="tr">
-                        <span class="tit_three">不中退款</span>
                         <span class="tit_four">免费</span>
                       </van-col>
                     </van-row>
@@ -105,11 +104,11 @@
 </template>
 <script>
 export default {
-  name: "recommend",
+  name: "free",
   data() {
     return {
       active: 0,
-      tabList: ["关注", "推荐", "二串", "总进球", "半全场", "单关", "篮球"],
+      tabList: ["全部", "二串", "总进球", "半全场", "篮球"],
       list: [],
       loading: false,
       finished: false

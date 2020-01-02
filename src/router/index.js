@@ -12,6 +12,10 @@ const recommend_detail = () => import(/* webpackChunkName: "recommend_detail" */
 const recommend_detail_small = () => import(/* webpackChunkName: "recommend_detail_small" */'@/view/recommendDetails/recommend_detail_small')//小站店主推荐详情
 const recommend_detail_common = () => import(/* webpackChunkName: "recommend_detail_common" */'@/view/recommendDetails/recommend_detail_common')//普通店主推荐详情
 const recommend_detail_expert = () => import(/* webpackChunkName: "recommend_detail_expert" */'@/view/recommendDetails/recommend_detail_expert')//专家推荐详情
+const optimization = () => import(/* webpackChunkName: "optimization" */'@/view/optimization/optimization')//2.0优选
+const optimization_recommend_detail = () => import(/* webpackChunkName: "optimization" */'@/view/optimizationDetails/optimization_recommend_detail')//优选推荐详情
+const optimization_expert_detail = () => import(/* webpackChunkName: "optimization" */'@/view/optimizationDetails/optimization_expert_detail')//专家推荐详情
+const free = () => import(/* webpackChunkName: "optimization" */'@/view/free/free')//免费
 const routes = [
   {
     path: '*',
@@ -103,6 +107,42 @@ const routes = [
     component: recommend_detail_expert,
     meta: {
       title: '推荐详情',
+      isleftarrow: true,
+      isrightarrow: true
+    }
+  },
+  {
+    name: 'optimization',
+    component: optimization,
+    meta: {
+      title: '2.0优选',
+      isleftarrow: true,
+      isrightarrow: true
+    }
+  },
+  {
+    name: 'optimization_recommend_detail',
+    component: optimization_recommend_detail,
+    meta: {
+      title: '推荐详情',
+      isleftarrow: true,
+      isrightarrow: true
+    }
+  },
+  {
+    name: 'optimization_expert_detail',
+    component: optimization_expert_detail,
+    meta: {
+      title: '推荐详情',
+      isleftarrow: true,
+      isrightarrow: true
+    }
+  },
+  {
+    name: 'free',
+    component: free,
+    meta: {
+      title: '免费专区',
       isleftarrow: true,
       isrightarrow: true
     }

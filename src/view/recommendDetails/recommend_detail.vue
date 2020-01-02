@@ -129,8 +129,8 @@
           <div class="cont1">待支付</div>
           <div class="cont2">38.00</div>
           <div class="c_box">
-            <sapn class="cont3">账户余额：</sapn>
-            <sapn class="cont4">10.00</sapn>
+            <span class="cont3">账户余额：</span>
+            <span class="cont4">10.00</span>
           </div>
           <div class="cont5">本单支付后账户余额剩余：0.00，还需支付38元</div>
           <div class="cont6">继续支付剩余38元</div>
