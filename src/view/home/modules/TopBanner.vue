@@ -1,111 +1,94 @@
 <template>
   <!-- 顶部滑动轮播 -->
   <div class="top_box">
-    <van-row type="flex"
-             align="center">
-      <van-col span="5"
-               class="logo">
-        <img src="@/assets/home/logo.png"
-             alt="">
+    <van-row type="flex" align="center">
+      <van-col span="5" class="logo">
+        <img src="@/assets/home/logo.png" alt />
       </van-col>
-      <van-col span="8"
-               class="title">
+      <van-col span="8" class="title">
         <div>大楚彩店</div>
-        <img src="@/assets/home/wx.png"
-             alt="">
-        <img src="@/assets/home/tel.png"
-             alt="">
-        <img src="@/assets/home/share.png"
-             alt="">
+        <img src="@/assets/home/wx.png" alt />
+        <img src="@/assets/home/tel.png" alt />
+        <img src="@/assets/home/share.png" alt />
       </van-col>
-      <van-col span="11"
-               class="tr btn">
+      <van-col span="11" class="tr btn">
         <router-link :to="{path:'/search',query:{}}">
           <span>输入名称搜索</span>
         </router-link>
       </van-col>
     </van-row>
-    <van-swipe class="handle_banner"
-               @change="onChange"
-               :loop="false"
-               :width="330"
-               :initial-swipe="initialSwipe"
-               :show-indicators="false">
-      <van-swipe-item class="b_item"
-                      :key="item.key"
-                      :index="index"
-                      v-for="(item,index) in top_banner_list">
+    <van-swipe
+      class="handle_banner"
+      @change="onChange"
+      :loop="false"
+      :width="330"
+      :initial-swipe="initialSwipe"
+      :show-indicators="false"
+    >
+      <van-swipe-item
+        class="b_item"
+        :key="item.key"
+        :index="index"
+        v-for="(item,index) in top_banner_list"
+      >
         <div class="item">
-          <van-row type="flex" align="center">
-            <van-col span="4">
-              <div class="t_txt tc">最高命中榜</div>
-            </van-col>
-            <van-col span="20"
-                     class="re_box">
-              <van-row type="flex"
-                       class='re_item'
-                       align="center">
-                <van-col span="2">1</van-col>
-                <van-col span="4"><img src="@/assets/home/game.png"
-                       alt=""></van-col>
-                <van-col span="12">超级大神</van-col>
-                <van-col span="5"
-                         class="tr">100%</van-col>
-              </van-row>
-              <van-row type="flex"
-                       class='re_item'
-                       align="center">
-                <van-col span="2">2</van-col>
-                <van-col span="4"><img src="@/assets/home/game.png"
-                       alt=""></van-col>
-                <van-col span="12">超级大神</van-col>
-                <van-col span="5"
-                         class="tr">100%</van-col>
-              </van-row>
-              <van-row type="flex"
-                       class='re_item'
-                       align="center">
-                <van-col span="2">3</van-col>
-                <van-col span="4"><img src="@/assets/home/game.png"
-                       alt=""></van-col>
-                <van-col span="12">超级大神</van-col>
-                <van-col span="5"
-                         class="tr">100%</van-col>
-              </van-row>
-              <van-row type="flex"
-                       class='re_item'
-                       align="center">
-                <van-col span="2">4</van-col>
-                <van-col span="4"><img src="@/assets/home/game.png"
-                       alt=""></van-col>
-                <van-col span="12">超级大神</van-col>
-                <van-col span="5"
-                         class="tr">100%</van-col>
-              </van-row>
-              <van-row type="flex"
-                       align="center">
-                <van-col span="2">5</van-col>
-                <van-col span="4"><img src="@/assets/home/game.png"
-                       alt=""></van-col>
-                <van-col span="12">超级大神</van-col>
-                <van-col span="5"
-                         class="tr">100%</van-col>
-              </van-row>
-            </van-col>
-          </van-row>
+          <router-link :to="{path:'ranking',query:{}}">
+            <van-row type="flex" align="center">
+              <van-col span="4">
+                <div class="t_txt tc">最高命中榜</div>
+              </van-col>
+              <van-col span="20" class="re_box">
+                <van-row type="flex" class="re_item" align="center">
+                  <van-col span="2">1</van-col>
+                  <van-col span="4">
+                    <img src="@/assets/home/game.png" alt />
+                  </van-col>
+                  <van-col span="12">超级大神</van-col>
+                  <van-col span="5" class="tr">100%</van-col>
+                </van-row>
+                <van-row type="flex" class="re_item" align="center">
+                  <van-col span="2">2</van-col>
+                  <van-col span="4">
+                    <img src="@/assets/home/game.png" alt />
+                  </van-col>
+                  <van-col span="12">超级大神</van-col>
+                  <van-col span="5" class="tr">100%</van-col>
+                </van-row>
+                <van-row type="flex" class="re_item" align="center">
+                  <van-col span="2">3</van-col>
+                  <van-col span="4">
+                    <img src="@/assets/home/game.png" alt />
+                  </van-col>
+                  <van-col span="12">超级大神</van-col>
+                  <van-col span="5" class="tr">100%</van-col>
+                </van-row>
+                <van-row type="flex" class="re_item" align="center">
+                  <van-col span="2">4</van-col>
+                  <van-col span="4">
+                    <img src="@/assets/home/game.png" alt />
+                  </van-col>
+                  <van-col span="12">超级大神</van-col>
+                  <van-col span="5" class="tr">100%</van-col>
+                </van-row>
+                <van-row type="flex" align="center">
+                  <van-col span="2">5</van-col>
+                  <van-col span="4">
+                    <img src="@/assets/home/game.png" alt />
+                  </van-col>
+                  <van-col span="12">超级大神</van-col>
+                  <van-col span="5" class="tr">100%</van-col>
+                </van-row>
+              </van-col>
+            </van-row>
+          </router-link>
         </div>
-        <div class="more"
-             v-show="index == top_banner_list.length-1"
-             @click="more">
-          <img src="@/assets/home/wx.png"
-               alt="">
+        <div class="more" v-show="index == top_banner_list.length-1" @click="more">
+          <img src="@/assets/home/wx.png" alt />
           <div class="mo_t">查看更多</div>
         </div>
       </van-swipe-item>
-
     </van-swipe>
   </div>
-
 </template>
 <script>
 export default {
@@ -114,8 +97,8 @@ export default {
 
   data() {
     return {
-      initialSwipe:0,//初始位置索引
-      top_banner_list:[1,2,3,4]
+      initialSwipe: 0, //初始位置索引
+      top_banner_list: [1, 2, 3, 4]
     };
   },
 
@@ -123,9 +106,7 @@ export default {
     onChange(index) {
       console.log(index);
     },
-    more(){
-      
-    }
+    more() {}
   }
 };
 </script>

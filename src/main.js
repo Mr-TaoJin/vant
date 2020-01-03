@@ -23,6 +23,8 @@ import {
   Popup,
   Stepper,
   Dialog,
+  Button,
+  Calendar,
 } from 'vant';
 Vue.use(NavBar)
   .use(Tabbar)
@@ -41,6 +43,8 @@ Vue.use(NavBar)
   .use(Popup)
   .use(Stepper)
   .use(Dialog)
+  .use(Button)
+  .use(Calendar)
 
 
 //公共组件

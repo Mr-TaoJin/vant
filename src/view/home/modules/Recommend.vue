@@ -21,8 +21,10 @@
         </router-link>
       </van-col>
       <van-col span="6" class="item tc">
-        <img src="@/assets/home/logo.png" alt />
-        <div>彩友工具</div>
+        <router-link :to="{path: '/focusGame', query:{}}">
+          <img src="@/assets/home/logo.png" alt />
+          <div>彩友工具</div>
+        </router-link>
       </van-col>
     </van-row>
   </div>

@@ -16,6 +16,8 @@ const optimization = () => import(/* webpackChunkName: "optimization" */'@/view/
 const optimization_recommend_detail = () => import(/* webpackChunkName: "optimization" */'@/view/optimizationDetails/optimization_recommend_detail')//优选推荐详情
 const optimization_expert_detail = () => import(/* webpackChunkName: "optimization" */'@/view/optimizationDetails/optimization_expert_detail')//专家推荐详情
 const free = () => import(/* webpackChunkName: "optimization" */'@/view/free/free')//免费
+const ranking = () => import(/* webpackChunkName: "ranking" */'@/view/ranking/ranking')//排行榜
+const focusGame = () => import(/* webpackChunkName: "focusGame" */'@/view/focusGame/focusGame')//焦点赛事
 const routes = [
   {
     path: '*',
@@ -143,6 +145,24 @@ const routes = [
     component: free,
     meta: {
       title: '免费专区',
+      isleftarrow: true,
+      isrightarrow: true
+    }
+  },
+  {
+    name: 'ranking',
+    component: ranking,
+    meta: {
+      title: '排行榜',
+      isleftarrow: true,
+      isrightarrow: true
+    }
+  },
+  {
+    name: 'focusGame',
+    component: focusGame,
+    meta: {
+      title: '焦点赛事',
       isleftarrow: true,
       isrightarrow: true
     }
