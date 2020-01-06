@@ -18,6 +18,7 @@ const optimization_expert_detail = () => import(/* webpackChunkName: "optimizati
 const free = () => import(/* webpackChunkName: "optimization" */'@/view/free/free')//免费
 const ranking = () => import(/* webpackChunkName: "ranking" */'@/view/ranking/ranking')//排行榜
 const focusGame = () => import(/* webpackChunkName: "focusGame" */'@/view/focusGame/focusGame')//焦点赛事
+const bind_tel = () => import(/* webpackChunkName: "bind_tel" */'@/view/user/bind_tel')//绑定手机号
 const routes = [
   {
     path: '*',
@@ -163,6 +164,15 @@ const routes = [
     component: focusGame,
     meta: {
       title: '焦点赛事',
+      isleftarrow: true,
+      isrightarrow: true
+    }
+  },
+  {
+    name: 'bind_tel',
+    component: bind_tel,
+    meta: {
+      title: '绑定手机号',
       isleftarrow: true,
       isrightarrow: true
     }

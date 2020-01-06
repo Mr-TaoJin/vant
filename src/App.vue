@@ -13,6 +13,9 @@ body {
   background-color: #f5f5f5;
   -webkit-font-smoothing: antialiased;
 }
+div{
+  box-sizing: border-box;
+}
 .main_box {
   box-sizing: border-box;
   /* padding: 1.22667rem 0 1.33333rem 0; */

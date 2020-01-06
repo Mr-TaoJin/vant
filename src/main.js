@@ -25,6 +25,7 @@ import {
   Dialog,
   Button,
   Calendar,
+  Field,
 } from 'vant';
 Vue.use(NavBar)
   .use(Tabbar)
@@ -45,6 +46,7 @@ Vue.use(NavBar)
   .use(Dialog)
   .use(Button)
   .use(Calendar)
+  .use(Field)
 
 
 //公共组件
