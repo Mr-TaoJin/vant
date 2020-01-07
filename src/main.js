@@ -26,6 +26,8 @@ import {
   Button,
   Calendar,
   Field,
+  CellGroup,
+  Uploader,
 } from 'vant';
 Vue.use(NavBar)
   .use(Tabbar)
@@ -47,6 +49,8 @@ Vue.use(NavBar)
   .use(Button)
   .use(Calendar)
   .use(Field)
+  .use(CellGroup)
+  .use(Uploader)
 
 
 //公共组件

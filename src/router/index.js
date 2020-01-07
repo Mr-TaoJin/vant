@@ -25,6 +25,10 @@ const residue = () => import(/* webpackChunkName: "residue" */'@/view/user/resid
 const recharge = () => import(/* webpackChunkName: "recharge" */'@/view/user/recharge')//充值
 const focus = () => import(/* webpackChunkName: "focus" */'@/view/user/focus')//我的关注
 const switch_store = () => import(/* webpackChunkName: "switch_store" */'@/view/user/switch_store')//切换店铺
+const recruit = () => import(/* webpackChunkName: "recruit" */'@/view/professor/recruit')//招募
+const become_boss = () => import(/* webpackChunkName: "become_boss" */'@/view/professor/become_boss')//成为专家
+const become_professor = () => import(/* webpackChunkName: "become_professor" */'@/view/professor/become_professor')//成为专家
+const check = () => import(/* webpackChunkName: "check" */'@/view/professor/check')//审核
 const routes = [
   {
     path: '*',
@@ -233,6 +237,42 @@ const routes = [
     component: switch_store,
     meta: {
       title: '切换店铺',
+      isleftarrow: true,
+      isrightarrow: true
+    }
+  },
+  {
+    name: 'recruit',
+    component: recruit,
+    meta: {
+      title: '成为专家',
+      isleftarrow: true,
+      isrightarrow: true
+    }
+  },
+  {
+    name: 'become_boss',
+    component: become_boss,
+    meta: {
+      title: '成为专家',
+      isleftarrow: true,
+      isrightarrow: true
+    }
+  },
+  {
+    name: 'become_professor',
+    component: become_professor,
+    meta: {
+      title: '成为专家',
+      isleftarrow: true,
+      isrightarrow: true
+    }
+  },
+  {
+    name: 'check',
+    component: check,
+    meta: {
+      title: '审核',
       isleftarrow: true,
       isrightarrow: true
     }
