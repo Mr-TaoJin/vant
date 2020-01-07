@@ -19,6 +19,12 @@ const free = () => import(/* webpackChunkName: "optimization" */'@/view/free/fre
 const ranking = () => import(/* webpackChunkName: "ranking" */'@/view/ranking/ranking')//排行榜
 const focusGame = () => import(/* webpackChunkName: "focusGame" */'@/view/focusGame/focusGame')//焦点赛事
 const bind_tel = () => import(/* webpackChunkName: "bind_tel" */'@/view/user/bind_tel')//绑定手机号
+const order = () => import(/* webpackChunkName: "order" */'@/view/user/order')//我的订单
+const order_detail = () => import(/* webpackChunkName: "order_detail" */'@/view/user/order_detail')//订单详情
+const residue = () => import(/* webpackChunkName: "residue" */'@/view/user/residue')//我的余额
+const recharge = () => import(/* webpackChunkName: "recharge" */'@/view/user/recharge')//充值
+const focus = () => import(/* webpackChunkName: "focus" */'@/view/user/focus')//我的关注
+const switch_store = () => import(/* webpackChunkName: "switch_store" */'@/view/user/switch_store')//切换店铺
 const routes = [
   {
     path: '*',
@@ -173,6 +179,60 @@ const routes = [
     component: bind_tel,
     meta: {
       title: '绑定手机号',
+      isleftarrow: true,
+      isrightarrow: true
+    }
+  },
+  {
+    name: 'order',
+    component: order,
+    meta: {
+      title: '我的订单',
+      isleftarrow: true,
+      isrightarrow: true
+    }
+  },
+  {
+    name: 'order_detail',
+    component: order_detail,
+    meta: {
+      title: '订单详情',
+      isleftarrow: true,
+      isrightarrow: true
+    }
+  },
+  {
+    name: 'residue',
+    component: residue,
+    meta: {
+      title: '我的余额',
+      isleftarrow: true,
+      isrightarrow: true
+    }
+  },
+  {
+    name: 'recharge',
+    component: recharge,
+    meta: {
+      title: '充值',
+      isleftarrow: true,
+      isrightarrow: true
+    }
+  },
+  {
+    name: 'focus',
+    component: focus,
+    meta: {
+      title: '我的关注',
+      isleftarrow: true,
+      isrightarrow: true
+    }
+  },
+  {
+    name: 'switch_store',
+    component: switch_store,
+    meta: {
+      title: '切换店铺',
       isleftarrow: true,
       isrightarrow: true
     }

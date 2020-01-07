@@ -28,7 +28,7 @@
 </template>
 <script>
 export default {
-  name: "share",
+  name: "bind_tel",
   data() {
     return {
       phone: "15626456226"

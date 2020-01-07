@@ -10,13 +10,17 @@
                        type="flex"
                        align="center">
                 <van-col>
-                  <img src="@/assets/home/game.png"
-                       alt />
+                  <router-link :to="{path:'/switch_store',query:{}}">
+                    <img src="@/assets/home/game.png"
+                         alt />
+                  </router-link>
                 </van-col>
                 <van-col span="24">
+
                   <div>
                     <span class="tit_one">超级大神</span>
                   </div>
+
                   <div>
                     <span v-if="false"
                           class="tit_one">15007142244</span>
@@ -34,24 +38,30 @@
           </div>
         </div>
         <div class="list_box">
-          <van-cell title="我的订单"
-                    is-link
-                    center
-                    value=""
-                    icon="volume-o"
-                    value-class="val_cla" />
-          <van-cell title="我的余额"
-                    is-link
-                    center
-                    value="100.52"
-                    icon="volume-o"
-                    value-class="val_cla" />
-          <van-cell title="我的关注"
-                    is-link
-                    center
-                    value=""
-                    icon="volume-o"
-                    value-class="val_cla" />
+          <router-link :to="{path:'/order',query:{}}">
+            <van-cell title="我的订单"
+                      is-link
+                      center
+                      value=""
+                      icon="volume-o"
+                      value-class="val_cla" />
+          </router-link>
+          <router-link :to="{path:'/residue',query:{}}">
+            <van-cell title="我的余额"
+                      is-link
+                      center
+                      value="100.52"
+                      icon="volume-o"
+                      value-class="val_cla" />
+          </router-link>
+          <router-link :to="{path:'/focus',query:{}}">
+            <van-cell title="我的关注"
+                      is-link
+                      center
+                      value=""
+                      icon="volume-o"
+                      value-class="val_cla" />
+          </router-link>
         </div>
         <div class="fot_box">
           <div v-if="true">
