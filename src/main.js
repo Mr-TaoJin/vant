@@ -28,6 +28,7 @@ import {
   Field,
   CellGroup,
   Uploader,
+  Overlay,
 } from 'vant';
 Vue.use(NavBar)
   .use(Tabbar)
@@ -51,6 +52,7 @@ Vue.use(NavBar)
   .use(Field)
   .use(CellGroup)
   .use(Uploader)
+  .use(Overlay)
 
 
 //公共组件

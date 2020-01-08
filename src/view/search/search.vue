@@ -2,8 +2,12 @@
   <div>
     <!-- <Header></Header> -->
     <div class="main_box">
-      <div class="serach_box">
-        <van-search placeholder="请输入搜索关键词" v-model="value" />
+      <div class="search_box">
+        <van-search v-model="value" placeholder="请输入搜索关键词" show-action shape="round">
+          <div slot="action" @click="onSearch">
+            <div class="btn">搜索</div>
+          </div>
+        </van-search>
       </div>
       <!-- 列表 有数据-->
       <van-list
@@ -128,6 +132,14 @@ export default {
 };
 </script>
 <style lang="less" scoped>
+.search_box {
+  .btn {
+    padding: 3px 20px;
+    border-radius: 5px;
+    background: #ff9900;
+    color: #ffffff;
+  }
+}
 .list_game_box {
   border-top: 2px solid #f5f5f5;
   .top {

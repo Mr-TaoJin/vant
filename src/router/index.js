@@ -29,6 +29,11 @@ const recruit = () => import(/* webpackChunkName: "recruit" */'@/view/professor/
 const become_boss = () => import(/* webpackChunkName: "become_boss" */'@/view/professor/become_boss')//成为专家
 const become_professor = () => import(/* webpackChunkName: "become_professor" */'@/view/professor/become_professor')//成为专家
 const check = () => import(/* webpackChunkName: "check" */'@/view/professor/check')//审核
+// 专家功能（暂时不知道路由跳转 ）
+const myHome = () => import(/* webpackChunkName: "check" */'@/view/expertFeatures/myHome')//我的主页
+const myEarnings = () => import(/* webpackChunkName: "check" */'@/view/expertFeatures/myEarnings')//我的收益
+const queryPlan = () => import(/* webpackChunkName: "check" */'@/view/expertFeatures/queryPlan')//查询方案
+const selection_scheme  = () => import(/* webpackChunkName: "check" */'@/view/expertFeatures/selection_scheme')//选择方案
 const routes = [
   {
     path: '*',
@@ -273,6 +278,42 @@ const routes = [
     component: check,
     meta: {
       title: '审核',
+      isleftarrow: true,
+      isrightarrow: true
+    }
+  },
+  {
+    name: 'myHome',
+    component: myHome,
+    meta: {
+      title: '我的主页',
+      isleftarrow: true,
+      isrightarrow: true
+    }
+  },
+  {
+    name: 'myEarnings',
+    component: myEarnings,
+    meta: {
+      title: '我的收益',
+      isleftarrow: true,
+      isrightarrow: true
+    }
+  },
+  {
+    name: 'queryPlan',
+    component: queryPlan,
+    meta: {
+      title: '查询方案',
+      isleftarrow: true,
+      isrightarrow: true
+    }
+  },
+  {
+    name: 'selection_scheme',
+    component: selection_scheme,
+    meta: {
+      title: '选择方案',
       isleftarrow: true,
       isrightarrow: true
     }
