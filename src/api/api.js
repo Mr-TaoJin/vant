@@ -2,14 +2,20 @@ import { getAction, postAction, deleteAction, putAction } from '@/api/manage'
 
 /**
 * 首页接口--------------------------------------------------------
-* @date 2019-12-27
+* @date 2020-01-11
 * @author Jason
 **/
 
-// 取消发布关于我们
-const questionCancelpublish = (params) => getAction("/nws/faq/cancelpublish", params);
+// 接口测试
+const testGet = (params) => getAction("/url/testGet", params);
+const testPost = (params) => postAction("/url/testPost", params);
+const testDelete = (params) => deleteAction("/url/testDelete", params);
+const testput = (params) => putAction("/url/testput", params);
 
 
 export {
- questionCancelpublish
+  testGet,
+  testPost,
+  testDelete,
+  testput
 }

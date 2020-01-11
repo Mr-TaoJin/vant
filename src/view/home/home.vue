@@ -23,6 +23,8 @@ import Recommend from "./modules/Recommend";
 import ImgBanner from "./modules/ImgBanner";
 import GameFocus from "./modules/GameFocus";
 import GameList from "./modules/GameList";
+
+import { testGet, testPost } from "@/api/api";
 export default {
   name: "home",
   components: { TopBanner, Recommend, ImgBanner, GameFocus, GameList },
@@ -31,7 +33,35 @@ export default {
     return {};
   },
 
-  methods: {}
+  methods: {
+    // 请求示例
+    requestGetCase() {
+      let params = {
+        a: "1111",
+        b: "2222"
+      };
+      testGet(params).then(res => {
+        console.log(res);
+      }).catch(err=>{
+        console.log(err);
+      });
+    },
+    requestPostCase() {
+      let params = {
+        c: "3333",
+        d: "44444"
+      };
+      testPost(params).then(res => {
+        console.log(res);
+      }).catch(err=>{
+        console.log(err);
+      });
+    }
+  },
+  mounted() {
+    this.requestGetCase();
+    this.requestPostCase();
+  }
 };
 </script>
 

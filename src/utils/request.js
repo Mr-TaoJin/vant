@@ -2,7 +2,7 @@ import Vue from 'vue'
 import axios from 'axios'
 import store from '@/store'
 
-import { Modal, notification } from 'ant-design-vue'
+import { Toast } from 'vant'
 import { ACCESS_TOKEN } from "@/store/mutation-types"
 import httpConfig from "@/httpConfig";
 // 创建 axios 实例
@@ -21,38 +21,23 @@ const err = (error) => {
     console.log("------异常响应------", error.response.status)
     switch (error.response.status) {
       case 403:
-        notification.error({ message: '系统提示', description: '拒绝访问', duration: 4 })
+        Toast('提示内容');
         break
       case 500:
-        notification.error({ message: '系统提示', description: '内部服务器错误', duration: 4 })
+        Toast('提示内容');
         if (token && data.message == "Token失效，请重新登录") {
-          //  Token失效采用弹框模式，不直接跳转
-          // store.dispatch('Logout').then(() => {
-          //     window.location.reload()
-          // })
-          Modal.error({
-            title: '登录已过期',
-            content: '很抱歉，登录已过期，请重新登录',
-            okText: '重新登录',
-            mask: false,
-            onOk: () => {
-              store.dispatch('Logout').then(() => {
-                Vue.ls.remove(ACCESS_TOKEN)
-                window.location.reload()
-              })
-            }
-          })
+          Toast('提示内容');
           // update-end- --- author:scott ------ date:20190225 ---- for:Token失效采用弹框模式，不直接跳转----
         }
         break
       case 404:
-        notification.error({ message: '系统提示', description: '很抱歉，资源未找到!', duration: 4 })
+        Toast('提示内容');
         break
       case 504:
-        notification.error({ message: '系统提示', description: '网络超时' })
+        Toast('提示内容');
         break
       case 401:
-        notification.error({ message: '系统提示', description: '未授权，请重新登录', duration: 4 })
+        Toast('提示内容');
         if (token) {
           store.dispatch('LogOut').then(() => {
             setTimeout(() => {
@@ -62,11 +47,7 @@ const err = (error) => {
         }
         break
       default:
-        notification.error({
-          message: '系统提示',
-          description: data.message,
-          duration: 4
-        })
+        Toast('提示内容');
         break
     }
   }
@@ -75,9 +56,9 @@ const err = (error) => {
 
 // request interceptor(请求拦截)
 service.interceptors.request.use(config => {
-  const token = Vue.ls.get(ACCESS_TOKEN)
+  const token = Vue.ls.get(ACCESS_TOKEN);
   if (token) {
-    config.headers['token'] = 'Bearer ' + token // 让每个请求携带自定义 token 请根据实际情况自行修改
+    config.headers['token'] = token // 让每个请求携带自定义 token 请根据实际情况自行修改
   }
   if (config.method == 'get') {
     config.params = {
@@ -85,6 +66,7 @@ service.interceptors.request.use(config => {
       ...config.params
     }
   }
+  console.log(config);
   return config
 }, (error) => {
   return Promise.reject(error)
@@ -93,33 +75,11 @@ service.interceptors.request.use(config => {
 // response interceptor（响应拦截）
 service.interceptors.response.use((response) => {
   if(response.data.ret == 10004030){
-    // notification.error({ message: '系统提示', description: response.data.msg, duration: 4 });
-    Modal.error({
-      title: '登录已过期',
-      content: '很抱歉，登录已过期，请重新登录',
-      okText: '重新登录',
-      mask: false,
-      onOk: () => {
-        store.dispatch('LogOut').then(() => {
-          window.location.reload()
-        })
-      }
-    })
+    Toast('提示内容');
   }else if(response.data.ret == 10001004){
-    // notification.error({ message: '系统提示', description: response.data.msg, duration: 4 });
-    Modal.error({
-      title: '系统提示',
-      content: response.data.msg,
-      okText: '重新登录',
-      mask: false,
-      onOk: () => {
-        store.dispatch('LogOut').then(() => {
-          window.location.reload()
-        })
-      }
-    })
+    Toast('提示内容');
   }else if(response.data.ret == 10004040){
-    notification.error({ message: '系统提示', description: response.data.msg, duration: 4 });
+    Toast('提示内容');
   }
   return response.data
 }, err)

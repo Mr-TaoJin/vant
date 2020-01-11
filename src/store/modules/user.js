@@ -4,7 +4,7 @@
 
 const user = {
   state: {
-    token: '11111111111111',
+    token: 'token-test',
     username: '',
   },
 
