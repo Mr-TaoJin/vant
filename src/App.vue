@@ -9,7 +9,6 @@
 <style>
 body {
   font-size: 14px;
-  /* background-color: #999; */
   background-color: #f5f5f5;
   -webkit-font-smoothing: antialiased;
 }

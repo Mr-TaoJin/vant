@@ -2,7 +2,7 @@
   <van-overlay :show="show"
                @click="close">
     <div class="wrapper">
-      <div class="block">
+      <div class="block" @click.stop>
         <van-row class="top tc"
                  type="flex"
                  align="center">
@@ -12,31 +12,274 @@
           <van-col span="8"
                    class="tit1">悉尼FC</van-col>
         </van-row>
+        <!-- 胜平负/让球 -->
         <div class="title">胜平负/让球</div>
-        <van-row type="flex"
+        <table>
+          <tr>
+            <td class="width10">0</td>
+            <td>
+              胜 2.01
+              <i class="sanjiao"></i>
+            </td>
+            <td>平 2.01</td>
+            <td>负 2.01</td>
+          </tr>
+          <tr>
+            <td class="green">+1</td>
+            <td>胜 2.01</td>
+            <td>平 2.01</td>
+            <td>负 2.01</td>
+          </tr>
+        </table>
+        <!-- 单 -->
+        <div class="title"><span class="dan">单</span><span>比分</span></div>
+        <table class="table_type_1">
+          <tr>
+            <td rowspan="3"
+                class="width10">胜</td>
+            <td>
+              <div>1:0</div>
+              <div>6.75</div>
+            </td>
+            <td>
+              <div>1:0</div>
+              <div>6.75</div>
+            </td>
+            <td>
+              <div>1:0</div>
+              <div>6.75</div>
+            </td>
+            <td>
+              <div>1:0</div>
+              <div>6.75</div>
+            </td>
+            <td>
+              <div>1:0</div>
+              <div>6.75</div>
+            </td>
+          </tr>
+          <tr>
+
+            <td>
+              <div>1:0</div>
+              <div>6.75</div>
+            </td>
+            <td>
+              <div>1:0</div>
+              <div>6.75</div>
+            </td>
+            <td>
+              <div>1:0</div>
+              <div>6.75</div>
+            </td>
+            <td>
+              <div>1:0</div>
+              <div>6.75</div>
+            </td>
+            <td>
+              <div>1:0</div>
+              <div>6.75</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div>1:0</div>
+              <div>6.75</div>
+            </td>
+            <td>
+              <div>1:0</div>
+              <div>6.75</div>
+            </td>
+            <td colspan="3">
+              <div>胜其他</div>
+              <div>37.00</div>
+            </td>
+          </tr>
+          <tr>
+            <td class="width10">平</td>
+            <td>
+              <div>1:0</div>
+              <div>6.75</div>
+            </td>
+            <td>
+              <div>1:0</div>
+              <div>6.75</div>
+            </td>
+            <td>
+              <div>1:0</div>
+              <div>6.75</div>
+            </td>
+            <td>
+              <div>1:0</div>
+              <div>6.75</div>
+            </td>
+            <td>
+              <div>平其他</div>
+              <div>6.75</div>
+            </td>
+          </tr>
+          <tr>
+            <td rowspan="3"
+                class="width10">负</td>
+            <td>
+              <div>1:0</div>
+              <div>6.75</div>
+            </td>
+            <td>
+              <div>1:0</div>
+              <div>6.75</div>
+            </td>
+            <td>
+              <div>1:0</div>
+              <div>6.75</div>
+            </td>
+            <td>
+              <div>1:0</div>
+              <div>6.75</div>
+            </td>
+            <td>
+              <div>1:0</div>
+              <div>6.75</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div>1:0</div>
+              <div>6.75</div>
+            </td>
+            <td>
+              <div>1:0</div>
+              <div>6.75</div>
+            </td>
+            <td>
+              <div>1:0</div>
+              <div>6.75</div>
+            </td>
+            <td>
+              <div>1:0</div>
+              <div>6.75</div>
+            </td>
+            <td>
+              <div>1:0</div>
+              <div>6.75</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div>1:0</div>
+              <div>6.75</div>
+            </td>
+            <td>
+              <div>1:0</div>
+              <div>6.75</div>
+            </td>
+            <td colspan="3">
+              <div>负其他</div>
+              <div>37.00</div>
+            </td>
+          </tr>
+        </table>
+        <!-- 总进球 -->
+        <div class="title"><span class="dan">单</span><span>总进球</span></div>
+        <table class="table_type_1">
+          <tr>
+            <td rowspan="2"
+                class="width10">总进球</td>
+            <td>
+              <div>1:0</div>
+              <div>6.75</div>
+            </td>
+            <td>
+              <div>1:0</div>
+              <div>6.75</div>
+            </td>
+            <td>
+              <div>1:0</div>
+              <div>6.75</div>
+            </td>
+            <td>
+              <div>1:0</div>
+              <div>6.75</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div>1:0</div>
+              <div>6.75</div>
+            </td>
+            <td>
+              <div>1:0</div>
+              <div>6.75</div>
+            </td>
+            <td>
+              <div>1:0</div>
+              <div>6.75</div>
+            </td>
+            <td>
+              <div>1:0</div>
+              <div>6.75</div>
+            </td>
+          </tr>
+        </table>
+        <!-- 半全场 -->
+        <div class="title"><span class="dan">单</span><span>总进球</span></div>
+        <table class="table_type_1">
+          <tr>
+            <td rowspan="3"
+                class="width10">半全场</td>
+            <td>
+              <div>1:0</div>
+              <div>6.75</div>
+            </td>
+            <td>
+              <div>1:0</div>
+              <div>6.75</div>
+            </td>
+            <td>
+              <div>1:0</div>
+              <div>6.75</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div>1:0</div>
+              <div>6.75</div>
+            </td>
+            <td>
+              <div>1:0</div>
+              <div>6.75</div>
+            </td>
+            <td>
+              <div>1:0</div>
+              <div>6.75</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div>1:0</div>
+              <div>6.75</div>
+            </td>
+            <td>
+              <div>1:0</div>
+              <div>6.75</div>
+            </td>
+            <td>
+              <div>1:0</div>
+              <div>6.75</div>
+            </td>
+          </tr>
+        </table>
+        <!-- 按钮 -->
+        <van-row class="fot tc"
+                 type="flex"
                  align="center">
-          <van-col span="24"
-                   class="tc">
-            <table>
-              <tr>
-                <td>0</td>
-                <td>
-                  胜 2.01
-                  <i class="sanjiao"></i>
-                </td>
-                <td>平 2.01</td>
-                <td>负 2.01</td>
-              </tr>
-              <tr>
-                <td class="green">+1</td>
-                <td>胜 2.01</td>
-                <td>平 2.01</td>
-                <td>负 2.01</td>
-              </tr>
-            </table>
+          <van-col span="12">
+            <div class="close" @click="close">取消</div>
+          </van-col>
+          <van-col span="12">
+            <div class="ok">确定</div>
           </van-col>
         </van-row>
-        
       </div>
     </div>
   </van-overlay>
@@ -48,7 +291,7 @@ export default {
 
   data() {
     return {
-      show: true
+      show: false
     };
   },
 
@@ -74,12 +317,15 @@ table {
   border-spacing: 0; /*设置行与单元格边框的间距。当表格边框独立（即border-collapse:separate;）此属性才起作用*/
   tr {
     padding: 0;
+    .width10 {
+      width: 10px;
+    }
     td {
       position: relative;
       padding: 0;
-      font-size: 12px;
-      border-bottom: 1px solid #000;
-      border-right: 1px solid #000;
+      font-size: 10px;
+      border-bottom: 1px solid #bfbfbf;
+      border-right: 1px solid #bfbfbf;
       padding: 8px 5px;
       .sanjiao {
         position: absolute;
@@ -92,31 +338,41 @@ table {
         font-size: 10px;
       }
     }
-    td.red{
-      color:#ff0000;
+    td.red {
+      color: #ff0000;
     }
-    td.green{
-      color:green;
-    }
-    .width32 {
-      width: 32px;
+    td.green {
+      color: green;
     }
   }
   tr:first-child td {
-    border-top: 1px solid #000;
+    border-top: 1px solid #bfbfbf;
   }
   tr td:first-child {
-    border-left: 1px solid #000;
+    border-left: 1px solid #bfbfbf;
   }
 }
-
+.table_type_1 {
+  td {
+    padding: 2px 5px;
+  }
+}
 .block {
   width: 96%;
+  height: 90%;
+  overflow-y: scroll;
   background-color: #fff;
   font-size: 12px;
   padding: 10px;
   .title {
     padding: 10px 0px;
+    .dan {
+      background: #ff0000;
+      color: #fff;
+      margin-right: 5px;
+      padding: 0px 3px;
+      border-radius: 5px;
+    }
   }
   .top {
     padding: 10px 0px;
@@ -124,6 +380,22 @@ table {
     .tit1 {
       font-size: 14px;
       font-weight: bold;
+    }
+  }
+  .fot {
+    .close {
+      margin: 20px 20px 10px;
+      padding: 5px 20px;
+      border: 1px solid #323232;
+      border-radius: 5px;
+    }
+    .ok {
+      background: #ff9900;
+      margin: 20px 20px 10px;
+      padding: 5px 20px;
+      color:#fff;
+      border: 1px solid #ff9900;
+      border-radius: 5px;
     }
   }
 }

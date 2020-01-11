@@ -112,6 +112,7 @@ export default {
     };
   },
   methods: {
+    onSearch(){},
     onLoad() {
       console.log("11111");
       // 异步更新数据

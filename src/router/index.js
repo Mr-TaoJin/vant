@@ -33,7 +33,8 @@ const check = () => import(/* webpackChunkName: "check" */'@/view/professor/chec
 const myHome = () => import(/* webpackChunkName: "check" */'@/view/expertFeatures/myHome')//我的主页
 const myEarnings = () => import(/* webpackChunkName: "check" */'@/view/expertFeatures/myEarnings')//我的收益
 const queryPlan = () => import(/* webpackChunkName: "check" */'@/view/expertFeatures/queryPlan')//查询方案
-const selection_scheme  = () => import(/* webpackChunkName: "check" */'@/view/expertFeatures/selection_scheme')//选择方案
+const selectionScheme  = () => import(/* webpackChunkName: "check" */'@/view/expertFeatures/selectionScheme')//选择方案
+const queryScheme  = () => import(/* webpackChunkName: "check" */'@/view/expertFeatures/queryScheme')//确定方案
 const routes = [
   {
     path: '*',
@@ -310,10 +311,19 @@ const routes = [
     }
   },
   {
-    name: 'selection_scheme',
-    component: selection_scheme,
+    name: 'selectionScheme',
+    component: selectionScheme,
     meta: {
       title: '选择方案',
+      isleftarrow: true,
+      isrightarrow: true
+    }
+  },
+  {
+    name: 'queryScheme',
+    component: queryScheme,
+    meta: {
+      title: '确定方案',
       isleftarrow: true,
       isrightarrow: true
     }
